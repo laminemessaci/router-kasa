@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+/* =============
+   CSS VARIABLES
+   ============= */
+
+:root {
+  --primary-500: #ff6060;
+  --primary-700: #a70000;
+  --primary-900: #3e0000;
+
+  --neutral-100: #f7f7f7;
+  --neutral-200: #e3e3e3;
+  --neutral-300: #c4c4c4;
+
+  --h1-size: 3rem;
+  --h2-size: 2.25rem;
+  --h3-size: 1.5rem;
+  --h4-size: 1.35rem;
+  --h5-size: 1.2rem;
+  --h6-size: 1.1rem;
+  --txt-size: 1rem;
+  --sm-size: 0.85rem;
+  --xs-size: 0.7rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ========
+   RAW TAGS
+   ======== */
+
+html {
+  box-sizing: border-box;
+
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
+main {
+  min-height: calc(100vh - 22rem);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-500);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+h4 {
+  font-size: var(--h4-size);
+}
+
+h5 {
+  font-size: var(--h5-size);
+}
+
+h6 {
+  font-size: var(--h6-size);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+/* ===============
+   CONTENT WRAPPER
+   =============== */
+
+.content-wrapper {
+  width: 75.75rem;
+  height: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  padding: 0 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 81.75rem) {
+  .content-wrapper {
+    width: 51.5rem;
+    padding: 0 2rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 55.5rem) {
+  .content-wrapper {
+    width: calc(100% - 2rem);
+    max-width: 21.25rem;
+    padding: 0;
   }
 }
+
