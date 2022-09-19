@@ -1,5 +1,47 @@
-.about{
-     background-color: rgb(232, 144, 10);
-    justify-content: center;
-    text-align: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3rem 0;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav li {
+  margin: 0 0 0 3rem;
+
+  text-align: center;
+}
+
+.header-link {
+  color: var(--primary-500);
+  font-size: var(--h3-size);
+  text-decoration: none;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 55.5rem) {
+  header {
+    padding: 1.5rem 0;
+  }
+
+  .header-logo {
+    height: 2rem;
+  }
+
+  .main-nav li {
+    margin: 0 0 0 1rem;
+  }
+
+  .header-link {
+    font-size: var(--sm-size);
+    text-transform: uppercase;
+  }
 }
