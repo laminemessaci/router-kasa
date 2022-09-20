@@ -1,5 +1,26 @@
-.about{
-     background-color: rgb(232, 144, 10);
-    justify-content: center;
-    text-align: center;
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  background: black;
+}
+
+footer img {
+  margin: 3rem 0 1rem 0;
+  color: white;
+}
+
+footer p {
+  color: white;
+  font-size: var(--h3-size);
+}
+
+@media screen and (max-width: 81.75rem) {
+  footer img {
+    height: 2rem;
+  }
+
+  footer p {
+    font-size: var(--txt-size);
+  }
 }
