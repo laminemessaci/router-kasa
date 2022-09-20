@@ -24,7 +24,8 @@ header {
 }
 
 .active-link {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+ border-bottom: 3px solid  #FF6060
 }
 
 @media screen and (max-width: 55.5rem) {
