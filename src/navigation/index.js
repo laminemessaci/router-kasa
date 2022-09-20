@@ -7,6 +7,7 @@ function Navigation() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/Accueil" element={<Home />} />
       <Route path="/a-propos" element={<About />} />
     </Routes>
   );

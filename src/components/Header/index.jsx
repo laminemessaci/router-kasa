@@ -5,6 +5,14 @@ import logo from "../../logo.svg";
 import "./style.css";
 
 function Header() {
+  const navStyle = ({ isActive }) => {
+    console.log(isActive);
+    return {
+      textDecoration: !isActive && "none",
+      // borderBottom: isActive && "3px solid  #FF6060",
+    };
+  };
+
   return (
     <header>
       <Link to="/">
@@ -14,13 +22,24 @@ function Header() {
       <nav className="main-nav">
         <ul>
           <li>
-            <NavLink className="header-link" to="/">
+            <NavLink
+              className={(navInfo) =>
+                navInfo.isActive ? "header-link active-link" : "header-link"
+              }
+              style={navStyle}
+              to="/Accueil"
+            >
               Accueil
             </NavLink>
           </li>
 
           <li>
-            <NavLink className="header-link" to="/a-propos">
+            <NavLink
+              className={(navInfo) =>
+                navInfo.isActive ? "header-link active-link" : "header-link"
+              }
+              to="/a-propos"
+            >
               &Agrave; propos
             </NavLink>
           </li>
