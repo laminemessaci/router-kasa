@@ -1,0 +1,95 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 26rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--primary-500);
+}
+
+.carousel__pictures-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0%);
+  transition: 300ms;
+}
+
+.carousel__picture {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  object-fit: cover;
+}
+
+.carousel__no-pic-message {
+  margin: 0 2rem;
+  width: 100%;
+  color: white;
+  font-size: var(--h3-size);
+  text-align: center;
+}
+
+.carousel__nav,
+.carousel__counter {
+  position: absolute;
+  color: white;
+}
+
+.carousel__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel i {
+  margin: 1.5rem;
+  font-size: 5rem;
+  text-shadow: 0 0 2px rgb(0, 0, 0, 70%);
+  cursor: pointer;
+}
+
+.carousel__counter {
+  width: 100%;
+  bottom: 1.5rem;
+  font-size: var(--h5-size);
+  text-align: center;
+  text-shadow: 0 0 2px rgb(0, 0, 0, 70%);
+}
+
+@media screen and (max-width: 81.75rem) {
+  .carousel {
+    height: 20rem;
+    border-radius: 1rem;
+  }
+
+  .carousel i {
+    font-size: 3.5rem;
+  }
+
+  .carousel__counter {
+    bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 55.5rem) {
+  .carousel {
+    height: 16rem;
+    border-radius: 0.5rem;
+  }
+
+  .carousel i {
+    margin: 1rem;
+
+    font-size: 2rem;
+  }
+
+  .carousel__counter {
+    bottom: 0.5rem;
+  }
+}
