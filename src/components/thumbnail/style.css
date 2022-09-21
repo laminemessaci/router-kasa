@@ -1,0 +1,60 @@
+.thumbnail-wrapper {
+  max-width: 100%;
+}
+
+.thumbnail,
+.thumbnail__filter {
+  width: 21.25rem;
+  height: 21.25rem;
+}
+
+.thumbnail {
+  position: relative;
+
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  background: var(--primary-500);
+}
+
+.thumbnail__cover {
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  text-decoration: none;
+
+  object-fit: cover;
+}
+
+.thumbnail__filter {
+  position: absolute;
+  top: 0;
+
+  background: linear-gradient(185deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5));
+}
+
+.thumbnail__title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+
+  margin: 0;
+
+  color: white;
+  font-size: var(--h5-size);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 55.5rem) {
+  .thumbnail,
+  .thumbnail__filter {
+    max-width: 100%;
+    height: 16rem;
+  }
+
+  .thumbnail {
+    margin: 0.5rem 0;
+  }
+}

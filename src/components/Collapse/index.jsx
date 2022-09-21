@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+
 import "./style.css";
 
 function Collapse({ title, textArray, ...rest }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const collapseIcon = `fas fa-chevron-${isOpen ? "up" : "down"}`;
+
+  function updateIsOpen() {
+    setIsOpen(!isOpen);
+  }
   return (
     <section className={`collapse${isOpen ? " is-open" : " is-close"}`}>
-      <h2 className="collapse__title" onClick={() => console.log("clicked")}>
+      <h2 className="collapse__title" onClick={updateIsOpen}>
         <span>{title}</span>
         <span className={collapseIcon}></span>
       </h2>

@@ -1,7 +1,8 @@
-import "./App.css";
-import Footer from "./components/Footer/index.jsx";
-import Header from "./components/Header/index.jsx";
 import Navigation from "./navigation/index.js";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import "./App.css";
 
 function App() {
   return (
@@ -9,7 +10,6 @@ function App() {
       <div className="content-wrapper">
         <Header />
         <Navigation />
-
         <Footer />
       </div>
     </>
