@@ -37,6 +37,8 @@ const Home = () => {
           type={"spinningBubbles"}
           color={"#ff6060"}
           className="Centred"
+          width={200}
+          height={200}
         />
       </>
     );

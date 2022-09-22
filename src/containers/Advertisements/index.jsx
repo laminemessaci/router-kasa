@@ -37,6 +37,8 @@ function Advertisements() {
     return (
       <>
         <ReactLoading
+          width={200}
+          height={200}
           type={"spinningBubbles"}
           color={"#ff6060"}
           className="Centred"
