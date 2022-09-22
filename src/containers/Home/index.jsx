@@ -138,7 +138,7 @@ const Home = () => {
         altText="Un paysage sauvage de bord de mer"
         title="Chez vous, partout et ailleurs"
       />
-      <Carousel pictures={pictures} />
+      {/* <Carousel pictures={pictures} /> */}
       <Gallery advertisements={fakeData} />
     </div>
   );
