@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./style.css";
-import Thumbnail from "../thumbnail/index.js";
+import Thumbnail from "../Thumbnail/index.js";
 import { PropertyAdvertisement } from "../../model/index.js";
 
 function Gallery({ advertisements, ...props }) {
-  console.log(advertisements);
+  // console.log(advertisements);
   return (
     <div className="gallery">
       <ul>
