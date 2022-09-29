@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-function Page4004() {
+function Page404() {
   return (
     <main className="Error404">
       <p className="Error404__status-code">404</p>
@@ -19,4 +19,4 @@ function Page4004() {
   );
 }
 
-export default Page4004;
+export default Page404;

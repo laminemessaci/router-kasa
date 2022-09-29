@@ -7,7 +7,7 @@ import ReactLoading from "react-loading";
 import "./style.css";
 import { getAdvertisements } from "../../service/api.js";
 import Tag from "../../components/Tag/index.jsx";
-import Page4004 from "../Page404/index.jsx";
+import Page404 from "../Page404/index.jsx";
 
 const initialState = {
   isLoading: true,
@@ -36,7 +36,7 @@ function Advertisements() {
   }, []);
 
   if (!advertisement) {
-    return <Page4004 />;
+    return <Page404 />;
   }
   if (isLoading) {
     return (
