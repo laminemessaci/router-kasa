@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel/index.jsx";
 import Collapse from "../../components/Collapse/index.jsx";
-import { useParams, Navigate } from "react-router";
+import { useParams } from "react-router";
 import ReactLoading from "react-loading";
 
 import "./style.css";
 import { getAdvertisements } from "../../service/api.js";
 import Tag from "../../components/Tag/index.jsx";
+import Page4004 from "../Page404/index.jsx";
 
 const initialState = {
   isLoading: true,
@@ -17,7 +18,7 @@ function Advertisements() {
   const { isLoading, advertisement } = state;
   const { id } = useParams();
 
-  console.log(state);
+  // console.log(state);
 
   const ratingScale = [1, 2, 3, 4, 5];
   async function fetchAdvertisement() {
@@ -34,6 +35,9 @@ function Advertisements() {
     fetchAdvertisement();
   }, []);
 
+  if (!advertisement) {
+    return <Page4004 />;
+  }
   if (isLoading) {
     return (
       <>
