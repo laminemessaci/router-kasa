@@ -6,6 +6,7 @@ import ReactLoading from "react-loading";
 
 import "./style.css";
 import { getAdvertisements } from "../../service/api.js";
+import Tag from "../../components/Tag/index.jsx";
 
 const initialState = {
   isLoading: true,
@@ -60,10 +61,14 @@ function Advertisements() {
             </h2>
 
             <div className="Advertisement__tags-box">
-              {advertisement.tags.map((tag) => (
+              {/* {advertisement.tags.map((tag) => (
                 <span className="Advertisement__tag" key={`tag-${tag}`}>
                   {tag}
                 </span>
+              ))} */}
+
+              {advertisement.tags.map((tag) => (
+                <Tag tag={tag} key={`tag-${tag}`} />
               ))}
             </div>
           </div>
