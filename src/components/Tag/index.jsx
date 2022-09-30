@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 
 import "./style.css";
 
@@ -10,4 +11,7 @@ function Tag({ tag }) {
   );
 }
 
+Tag.propTypes = {
+  tag: PropTypes.string.isRequired,
+};
 export default Tag;
