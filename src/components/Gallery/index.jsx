@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./style.css";
-import Thumbnail from "../Thumbnail/index.js";
+import Thumbnail from "../Thumbnail";
 import { PropertyAdvertisement } from "../../model/index.js";
 
 function Gallery({ advertisements, ...props }) {

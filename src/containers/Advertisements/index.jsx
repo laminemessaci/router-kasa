@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel/index.jsx";
 import Collapse from "../../components/Collapse/index.jsx";
-import { useParams, Navigate } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import ReactLoading from "react-loading";
 
 import "./style.css";
 import { getAdvertisements } from "../../service/api.js";
+import Tag from "../../components/Tag/index.jsx";
+import Page404 from "../Page404/index.jsx";
+import Rating from "../../components/Rating/index.jsx";
 
 const initialState = {
   isLoading: true,
@@ -14,14 +17,19 @@ const initialState = {
 function Advertisements() {
   const [state, setState] = useState(initialState);
   const { isLoading, advertisement } = state;
-  const { id } = useParams();
 
-  console.log(state);
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { rating } = advertisement;
+  // console.log(state);
 
   const ratingScale = [1, 2, 3, 4, 5];
   async function fetchAdvertisement() {
     const advs = await getAdvertisements();
     const advertisementToDisplay = advs.findById(id);
+    if (!advertisementToDisplay) {
+      navigate("/Page404");
+    }
     setState({
       ...initialState,
       isLoading: false,
@@ -37,6 +45,8 @@ function Advertisements() {
     return (
       <>
         <ReactLoading
+          width={200}
+          height={200}
           type={"spinningBubbles"}
           color={"#ff6060"}
           className="Centred"
@@ -58,10 +68,14 @@ function Advertisements() {
             </h2>
 
             <div className="Advertisement__tags-box">
-              {advertisement.tags.map((tag) => (
+              {/* {advertisement.tags.map((tag) => (
                 <span className="Advertisement__tag" key={`tag-${tag}`}>
                   {tag}
                 </span>
+              ))} */}
+
+              {advertisement.tags.map((tag) => (
+                <Tag tag={tag} key={`tag-${tag}`} />
               ))}
             </div>
           </div>
@@ -81,12 +95,7 @@ function Advertisements() {
 
             <div className="Advertisement__rating">
               {ratingScale.map((scale) => (
-                <i
-                  className={`fas fa-star${
-                    scale <= advertisement.rating ? " colored" : ""
-                  }`}
-                  key={`star-${scale}`}
-                ></i>
+                <Rating scale={scale} rating={rating} key={`star-${scale}`} />
               ))}
             </div>
           </div>
