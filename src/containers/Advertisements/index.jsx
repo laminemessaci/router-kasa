@@ -8,6 +8,7 @@ import "./style.css";
 import { getAdvertisements } from "../../service/api.js";
 import Tag from "../../components/Tag/index.jsx";
 import Page404 from "../Page404/index.jsx";
+import Rating from "../../components/Rating/index.jsx";
 
 const initialState = {
   isLoading: true,
@@ -16,7 +17,9 @@ const initialState = {
 function Advertisements() {
   const [state, setState] = useState(initialState);
   const { isLoading, advertisement } = state;
+
   const { id } = useParams();
+  const { rating } = advertisement;
 
   // console.log(state);
 
@@ -92,12 +95,7 @@ function Advertisements() {
 
             <div className="Advertisement__rating">
               {ratingScale.map((scale) => (
-                <i
-                  className={`fas fa-star${
-                    scale <= advertisement.rating ? " colored" : ""
-                  }`}
-                  key={`star-${scale}`}
-                ></i>
+                <Rating scale={scale} rating={rating} key={`star-${scale}`} />
               ))}
             </div>
           </div>
