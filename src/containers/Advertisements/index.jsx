@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel/index.jsx";
 import Collapse from "../../components/Collapse/index.jsx";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import ReactLoading from "react-loading";
 
 import "./style.css";
@@ -19,14 +19,17 @@ function Advertisements() {
   const { isLoading, advertisement } = state;
 
   const { id } = useParams();
+  const navigate = useNavigate();
   const { rating } = advertisement;
-
   // console.log(state);
 
   const ratingScale = [1, 2, 3, 4, 5];
   async function fetchAdvertisement() {
     const advs = await getAdvertisements();
     const advertisementToDisplay = advs.findById(id);
+    if (!advertisementToDisplay) {
+      navigate("/Page404");
+    }
     setState({
       ...initialState,
       isLoading: false,
@@ -38,9 +41,6 @@ function Advertisements() {
     fetchAdvertisement();
   }, []);
 
-  if (!advertisement) {
-    return <Page404 />;
-  }
   if (isLoading) {
     return (
       <>
