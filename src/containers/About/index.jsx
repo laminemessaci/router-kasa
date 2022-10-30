@@ -1,9 +1,9 @@
-import React from "react";
-import { ABOUT_CONTENTS } from "../../constants";
-import Banner from "../../components/Banner/index.jsx";
-import Collapse from "../../components/Collapse/index.jsx";
+import React from 'react';
+import { ABOUT_CONTENTS } from '../../constants';
+import Banner from '../../components/Banner/index.jsx';
+import Collapse from '../../components/Collapse/index.jsx';
 
-import "./style.css";
+import './style.css';
 
 const About = () => {
   return (

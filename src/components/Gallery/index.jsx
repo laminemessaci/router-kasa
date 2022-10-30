@@ -5,7 +5,7 @@ import Thumbnail from "../Thumbnail";
 import { PropertyAdvertisement } from "../../model/index.js";
 
 function Gallery({ advertisements, ...props }) {
-  console.log(advertisements);
+ // console.log(advertisements);
   return (
     <div className="gallery">
       <ul>

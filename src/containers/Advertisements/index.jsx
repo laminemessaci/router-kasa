@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Carousel from "../../components/Carousel/index.jsx";
-import Collapse from "../../components/Collapse/index.jsx";
-import { useParams, useNavigate } from "react-router";
-import ReactLoading from "react-loading";
+import React, { useEffect, useState } from 'react';
+import Carousel from '../../components/Carousel/index.jsx';
+import Collapse from '../../components/Collapse/index.jsx';
+import { useParams, useNavigate } from 'react-router';
+import ReactLoading from 'react-loading';
 
-import "./style.css";
-import { getAdvertisements } from "../../service/api.js";
-import Tag from "../../components/Tag/index.jsx";
-import Page404 from "../Page404/index.jsx";
-import Rating from "../../components/Rating/index.jsx";
+import './style.css';
+import { getAdvertisements } from '../../service/api.js';
+import Tag from '../../components/Tag/index.jsx';
+import Rating from '../../components/Rating/index.jsx';
 
 const initialState = {
   isLoading: true,
@@ -28,7 +27,7 @@ function Advertisements() {
     const advs = await getAdvertisements();
     const advertisementToDisplay = advs.findById(id);
     if (!advertisementToDisplay) {
-      navigate("/Page404");
+      navigate('/Page404');
     }
     setState({
       ...initialState,
@@ -47,8 +46,8 @@ function Advertisements() {
         <ReactLoading
           width={200}
           height={200}
-          type={"spinningBubbles"}
-          color={"#ff6060"}
+          type={'spinningBubbles'}
+          color={'#ff6060'}
           className="Centred"
         />
       </>
@@ -68,12 +67,6 @@ function Advertisements() {
             </h2>
 
             <div className="Advertisement__tags-box">
-              {/* {advertisement.tags.map((tag) => (
-                <span className="Advertisement__tag" key={`tag-${tag}`}>
-                  {tag}
-                </span>
-              ))} */}
-
               {advertisement.tags.map((tag) => (
                 <Tag tag={tag} key={`tag-${tag}`} />
               ))}
