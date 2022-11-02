@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/router-kasa/static/css/main.c21de800.css",
+    "main.js": "/router-kasa/static/js/main.e00704cf.js",
+    "static/js/787.897618b2.chunk.js": "/router-kasa/static/js/787.897618b2.chunk.js",
+    "static/media/logo.svg": "/router-kasa/static/media/logo.11361d007b0903e7be76324e6a79e744.svg",
+    "static/media/logo-white.svg": "/router-kasa/static/media/logo-white.2553fb29683f2c12e44904bd8503bf1b.svg",
+    "index.html": "/router-kasa/index.html",
+    "main.c21de800.css.map": "/router-kasa/static/css/main.c21de800.css.map",
+    "main.e00704cf.js.map": "/router-kasa/static/js/main.e00704cf.js.map",
+    "787.897618b2.chunk.js.map": "/router-kasa/static/js/787.897618b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c21de800.css",
+    "static/js/main.e00704cf.js"
+  ]
+}
