@@ -44,7 +44,7 @@ export class PropertyAdvertisementsList {
    */
   constructor(advertisements) {
     this.advertisements = advertisements;
-    console.log(this.advertisements[2]);
+    //console.log(this.advertisements[2]);
   }
 
   /**

@@ -20,7 +20,7 @@ function Advertisements() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { rating } = advertisement;
-  // console.log(state);
+  console.log(state);
 
   const ratingScale = [1, 2, 3, 4, 5];
   async function fetchAdvertisement() {
