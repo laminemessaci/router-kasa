@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 function Collapse({ title, textArray, ...rest }) {
-  console.log('title, textArray : ', title, textArray);
+  // console.log('title, textArray : ', title, textArray);
   const [isOpen, setIsOpen] = useState(false);
   const collapseIcon = `fas fa-chevron-${isOpen ? 'up' : 'down'}`;
 
