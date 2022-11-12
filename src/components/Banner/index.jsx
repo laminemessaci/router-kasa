@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import "./style.css";
+import './style.css';
 
-function Banner(props) {
+const Banner = (props) => {
   const { imgSource, altText, title } = props;
   return (
     <div className="hero-banner">
@@ -11,7 +11,7 @@ function Banner(props) {
       <h1>{title}</h1>
     </div>
   );
-}
+};
 
 Banner.propTypes = {
   imgSource: PropTypes.string.isRequired,

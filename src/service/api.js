@@ -1,14 +1,14 @@
 import {
   PropertyAdvertisement,
   PropertyAdvertisementsList,
-} from "../model/index.js";
+} from '../model/index.js';
 
 export const fetchAdvertisements = async () => {
   try {
-    const response = await fetch("/advertisements.json", {
+    const response = await fetch('/advertisements.json', {
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
     });
     const data = await response.json();
@@ -16,11 +16,14 @@ export const fetchAdvertisements = async () => {
 
     return data.data;
   } catch (e) {
-    console.error("Something went wrong: ", e);
-    window.alert("Something went wrong: ", e);
+    console.error('Something went wrong: ', e);
+    window.alert('Something went wrong: ', e);
   }
 };
 
+/**
+ * Get data and reformat it
+ */
 export const getAdvertisements = async () => {
   const response = await fetchAdvertisements();
   if (response) {

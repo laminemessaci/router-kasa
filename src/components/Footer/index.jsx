@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logoWhite from "../../logo-white.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logoWhite from '../../logo-white.svg';
 
-import "./style.css";
+import './style.css';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <img src={logoWhite} alt="Kasa" />
       </Link>
 
-      <p>&copy; 2021 Kasa. Tous droits réservés</p>
+      <p>&copy; 2022 Kasa. Tous droits réservés</p>
     </footer>
   );
 };

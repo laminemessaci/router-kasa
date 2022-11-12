@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import ReactLoading from "react-loading";
+import React, { useEffect, useState } from 'react';
+import ReactLoading from 'react-loading';
 
-import Banner from "../../components/Banner";
-import Gallery from "../../components/Gallery/index.jsx";
-import { getAdvertisements } from "../../service/api.js";
+import Banner from '../../components/Banner';
+import Gallery from '../../components/Gallery/index.jsx';
+import { getAdvertisements } from '../../service/api.js';
 
-import "./style.css";
+import './style.css';
 
 const initialState = {
   isLoading: true,
@@ -34,8 +34,8 @@ const Home = () => {
     return (
       <>
         <ReactLoading
-          type={"spinningBubbles"}
-          color={"#ff6060"}
+          type={'spinningBubbles'}
+          color={'#ff6060'}
           className="Centred"
           width={200}
           height={200}
@@ -50,7 +50,7 @@ const Home = () => {
         altText="Un paysage sauvage de bord de mer"
         title="Chez vous, partout et ailleurs"
       />
-      {/* <Carousel pictures={pictures} /> */}
+
       <Gallery advertisements={advertisements} />
     </div>
   );
