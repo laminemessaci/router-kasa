@@ -1,8 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./style.css";
-import Thumbnail from "../Thumbnail";
-import { PropertyAdvertisement } from "../../model/index.js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './style.css';
+
+import { PropertyAdvertisement } from '../../model/index.js';
+import Thumbnail from './../thumbnail';
 
 function Gallery({ advertisements, ...props }) {
   console.log(advertisements);
