@@ -1,9 +1,9 @@
-import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
-import Home from "../containers/Home";
-import About from "../containers/About";
-import Advertisements from "../containers/Advertisements";
-import Page404 from "../containers/Page404/index.jsx";
+import React from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Home from '../containers/Home';
+import About from '../containers/About';
+import Advertisements from '../containers/Advertisements';
+import Page404 from '../containers/Page404/index.jsx';
 
 function Navigation() {
   return (
