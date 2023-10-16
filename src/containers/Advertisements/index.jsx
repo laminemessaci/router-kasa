@@ -23,7 +23,10 @@ function Advertisements() {
   console.log(state);
 
   const ratingScale = [1, 2, 3, 4, 5];
-  async function fetchAdvertisement() {
+ 
+
+  useEffect(() => {
+     async function fetchAdvertisement() {
     const advs = await getAdvertisements();
     const advertisementToDisplay = advs.findById(id);
     if (!advertisementToDisplay) {
@@ -35,8 +38,6 @@ function Advertisements() {
       advertisement: advertisementToDisplay,
     });
   }
-
-  useEffect(() => {
     fetchAdvertisement();
   }, []);
 
