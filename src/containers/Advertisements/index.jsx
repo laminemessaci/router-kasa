@@ -20,7 +20,7 @@ function Advertisements() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { rating } = advertisement;
-  console.log(state);
+
 
   const ratingScale = [1, 2, 3, 4, 5];
  
@@ -39,7 +39,7 @@ function Advertisements() {
     });
   };
     fetchAdvertisement();
-  }, []);
+  }, [id, navigate]);
 
   if (isLoading) {
     return (
