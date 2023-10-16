@@ -37,7 +37,7 @@ function Advertisements() {
       isLoading: false,
       advertisement: advertisementToDisplay,
     });
-  }
+  };
     fetchAdvertisement();
   }, []);
 
