@@ -34,9 +34,9 @@ You can check out the live demo of this project [here](https://immo-0r0m.onrende
 
 ## Author
 
-- Your Name
-- Email: your@email.com
+- Lamine MESSACI
+- Email: lamine.messaci@gmail.com
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT
