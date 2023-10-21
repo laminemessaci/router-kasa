@@ -13,8 +13,11 @@ This project is a React application that provides router functionality for the K
 You can check out the live demo of this project [here](https://immo-0r0m.onrender.com/).
 
 ## Screenshot
-
-![Screenshot of the application](screenshot.png)
+![ScreenShot_20231021223532](https://github.com/laminemessaci/router-kasa/assets/60298344/faebb244-7a5b-4bf3-b0d2-5263cfb2837f)
+![ScreenShot_20231021223553](https://github.com/laminemessaci/router-kasa/assets/60298344/57a7bc0d-6b43-4a31-b7e9-067fb36c438a)
+![ScreenShot_20231021223612](https://github.com/laminemessaci/router-kasa/assets/60298344/f87d4461-99d2-42a9-ba64-435ec7584d5c)
+![ScreenShot_20231021223655](https://github.com/laminemessaci/router-kasa/assets/60298344/7d099de6-fd2d-4200-8058-a0f961aba44a)
+![ScreenShot_20231021223914](https://github.com/laminemessaci/router-kasa/assets/60298344/358106be-9e80-4501-8b3a-4273cca5cf9c)
 
 ## Installation
 
